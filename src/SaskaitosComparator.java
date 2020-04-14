@@ -12,7 +12,7 @@ public class SaskaitosComparator implements Comparator<Saskaita> {
     @Override
     public int compare(Saskaita saskaita1, Saskaita saskaita2) {
 
-        //pagal userId ir tada menesi
+        //pagal userId ir tada menesį
 
         int menuo1 = saskaita1.getMenuo();
         int menuo2 = saskaita2.getMenuo();
@@ -28,7 +28,7 @@ public class SaskaitosComparator implements Comparator<Saskaita> {
         else {
             return Integer.compare(menuo1, menuo2);
         }
-        // pagal menesi o veliau pagal userId
+        // pagal menesį o vėliau pagal userId
         /*
         if (menuo1 > menuo2) return 1;
         else if (menuo1 < menuo2) return -1;

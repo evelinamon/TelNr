@@ -1,8 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Pagalbine {
     public static void spausdink(ArrayList<Saskaita> sarasas, HashMap<String, TelNr> telNrHM) {
@@ -19,7 +16,7 @@ public class Pagalbine {
             TelNr telNr = telNrHM.get(saskaita.getTelNr()); //key <- saskaita.getTelNr, value <- telNr
             VisaSaskaita visaSaskaita = new VisaSaskaita(saskaita.getTelNr(), saskaita.getMenuo(), saskaita.getSuma(), telNr.getUserId());
             //sukuriame visa saskaita ir uzpildome duomenimis apie klienta
-            ArrayList<VisaSaskaita> visosSaskaitos = klientuSaskaitos.get(telNr.getUserId()); //nieko negauname pirma kalrta antra karta arraylist
+            ArrayList<VisaSaskaita> visosSaskaitos = klientuSaskaitos.get(telNr.getUserId()); //nieko negauname pirma karta antra karta arraylist
             if (visosSaskaitos == null) {//jeigu nieko nera
                 ArrayList<VisaSaskaita> naujosSaskaitos = new ArrayList<>();
                 naujosSaskaitos.add(visaSaskaita);
@@ -30,14 +27,6 @@ public class Pagalbine {
         }
         return klientuSaskaitos;
     }
-
-
-    /*public static void spausdink(ArrayList<VisaSaskaita> sarasas) {
-        for (VisaSaskaita p : sarasas) {
-            System.out.println(p);
-        }
-        System.out.println();
-    }*/
 
     public static void rezultatas(HashMap<Integer, ArrayList<VisaSaskaita>>duomenys) {
         for (int userId : duomenys.keySet()) {//einame per hashmapo key kolekcija
@@ -55,7 +44,8 @@ public class Pagalbine {
                         if (menuo == m.getMenuo()) {
                             telefonoNumeriai.add(m.getTelNr());
                         }
-                    } System.out.println("UserId = " + userId + " menuo = " + menuo + " moketi = " + suma + " naudoti tel nr " + telefonoNumeriai);
+                    }
+                    System.out.println("UserId = " + userId + " menuo = " + menuo + " moketi = " + suma + " naudoti tel nr " + telefonoNumeriai);
                 }
             }
         }
