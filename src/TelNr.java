@@ -1,6 +1,10 @@
-import java.util.Comparator;
-
-public class TelNr implements Comparator {
+/*
+    A JavaBean is a Java object that satisfies certain programming conventions:
+    - instance variables should be private
+    - public setter and getter methods
+    - no-arg constructor
+*/
+public class TelNr{
 
     private String telNr;
     private int userId;
@@ -27,10 +31,5 @@ public class TelNr implements Comparator {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
     }
 }

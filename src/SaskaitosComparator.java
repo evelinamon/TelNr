@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.HashMap;
 
-public class SaskaitosComparator implements Comparator<Saskaita> {
+public class SaskaitosComparator implements Comparator<Saskaita> {//privalo override metodus
 
     private HashMap<String, TelNr> telNrMap;
 
@@ -28,13 +28,11 @@ public class SaskaitosComparator implements Comparator<Saskaita> {
         else {
             return Integer.compare(menuo1, menuo2);
         }
-        // pagal menesį o vėliau pagal userId
+        // pagal menesį o vęliau pagal userId
         /*
         if (menuo1 > menuo2) return 1;
         else if (menuo1 < menuo2) return -1;
         else {
-            int p1 = telNr1.getUserId();
-            int p2 = telNr2.getUserId();
             return Integer.compare(p1, p2);
         }*/
     }

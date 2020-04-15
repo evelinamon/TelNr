@@ -1,4 +1,4 @@
-public class Saskaita implements Comparable<Saskaita> {
+public class Saskaita{//extendina kita klase
 
     private String telNr;
     private int menuo;
@@ -8,7 +8,7 @@ public class Saskaita implements Comparable<Saskaita> {
     }
 
     @Override
-    public String toString() {
+    public String toString() {//pavercia i teksta
         return " telefono numeris " + getTelNr()
                 + " menuo " + getMenuo()
                 + " suma= " + getSuma();
@@ -35,10 +35,5 @@ public class Saskaita implements Comparable<Saskaita> {
     }
 
     public void setSuma(int suma) {
-    }
-
-    @Override
-    public int compareTo(Saskaita o) {
-        return 0;
     }
 }

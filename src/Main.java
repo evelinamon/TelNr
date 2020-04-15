@@ -12,7 +12,7 @@ public class Main {
         ShellSort.shellSort(saskaitos, new SaskaitosComparator(numeriai));
         Pagalbine.spausdink(saskaitos, numeriai);
 
-        HashMap<Integer, ArrayList<VisaSaskaita>> duomenys = Pagalbine.klientuSaskaitos(saskaitos, numeriai); //iškviečiame funkciją klienų saskaitos
+        HashMap<Integer, ArrayList<VisaSaskaita>> duomenys = Pagalbine.klientuSaskaitos(saskaitos, numeriai);
         System.out.println();
 
         Pagalbine.rezultatas(duomenys);
